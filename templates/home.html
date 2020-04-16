@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="https://www.google.com/recaptcha/api.js"></script>
+    </head>
+    <body style="text-align: center">
+        <div>
+            <h1>
+                LANDING PAGE /home
+            </h1>
+        </div>
+        <div>
+            <h3>ARE YOU HUMAN?????</h3>
+            <form method="POST" action="{{ url_for('success') }}" style="text-align: center">
+                <input type="submit">
+                <p>
+                    <div class="g-recaptcha" data-sitekey="{{ pub_key }}" style="text-align: center; display: inline-block;"></div>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
