@@ -3,7 +3,7 @@ from requests import post
 from flask import Flask, render_template, request
 
 
-# helpers ============================================================= #
+# helpers ============================================================ #
 
 class ReCaptha():
     # self generated
@@ -21,7 +21,7 @@ def is_human(captcha_response):
     return response_text['success']
 
 
-# main ================================================================ #
+# main =============================================================== #
 
 app = Flask(__name__)
 app.config.from_object(ReCaptha)
@@ -53,7 +53,7 @@ def fail():
     return render_template('fail.html')
 
 
-# start =============================================================== #
+# start ============================================================== #
 
 if __name__ == "__main__":
     app.run()
